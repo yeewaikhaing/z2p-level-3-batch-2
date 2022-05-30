@@ -12,7 +12,26 @@ public class CRUD {
 		//save_with_prepareStatement();
 		//saveEmployee();
 		//login();
-		viewAll();
+		//viewAll();
+		
+		// update
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter promote salary: ");
+		double salary = Double.parseDouble(sc.nextLine());
+		if(DatabaseHandler.promoteSalary(salary))
+			System.out.println("Update success");
+		else 
+			System.out.println("Fail");
+		
+		//sc.close();
+		
+		// delete
+		//Scanner sc = new Scanner(System.in);
+		System.out.print("Enter city name to delete: ");
+		String city = sc.nextLine();
+		DatabaseHandler.deleteByCity(city);
+		System.out.println("delete success");
+		
 	}
 
 	private static void viewAll() {
