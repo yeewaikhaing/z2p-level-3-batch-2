@@ -4,7 +4,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class CRUD {
+public class CRUD_1 {
 
 	public static void main(String[] args) {
 
