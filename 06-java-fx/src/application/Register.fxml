@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="application.RegisterController" prefHeight="589.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="245.0" layoutY="35.0" prefHeight="31.0" prefWidth="201.0" text="Register Form">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="137.0" layoutY="125.0" text="Username">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name" layoutX="232.0" layoutY="121.0" prefHeight="26.0" prefWidth="250.0" promptText="Enter User name" />
+      <Label layoutX="137.0" layoutY="170.0" text="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txt_pass" layoutX="232.0" layoutY="168.0" prefHeight="26.0" prefWidth="250.0" promptText="Enter password" />
+      <Label layoutX="139.0" layoutY="213.0" text="Birthday">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txt_dob" layoutX="230.0" layoutY="211.0" prefHeight="26.0" prefWidth="250.0" promptText="Choose Birthday" />
+      <Label layoutX="143.0" layoutY="260.0" text="City">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbo_city" layoutX="232.0" layoutY="255.0" prefHeight="26.0" prefWidth="250.0" promptText="Choose City" />
+      <Label layoutX="143.0" layoutY="306.0" text="Skillsets">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chk_java" layoutX="231.0" layoutY="308.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" text="Java" />
+      <CheckBox fx:id="chk_php" layoutX="299.0" layoutY="308.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" text="PHP" />
+      <CheckBox fx:id="chk_javascript" layoutX="380.0" layoutY="306.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" text="Javascript" />
+      <Label layoutX="140.0" layoutY="347.0" text="Gender">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="232.0" layoutY="348.0" mnemonicParsing="false" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="rad_group" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="299.0" layoutY="348.0" mnemonicParsing="false" text="Female" toggleGroup="$rad_group" />
+      <TextArea fx:id="text_area" layoutX="233.0" layoutY="388.0" prefHeight="110.0" prefWidth="250.0" promptText="Other Information" />
+      <Label layoutX="145.0" layoutY="387.0" text="Other">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="233.0" layoutY="521.0" mnemonicParsing="false" onAction="#btn_register_click" style="-fx-background-color: #4000ff#4000ff;" text="Register" textFill="#fcf7f7">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="326.0" layoutY="521.0" mnemonicParsing="false" onAction="#btn_login_click" prefHeight="29.0" prefWidth="72.0" style="-fx-background-color: #8000ff#8000ff;" text="Login" textFill="#f8f7f7">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
