@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -14,6 +15,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -55,6 +57,40 @@ public class RegisterController implements Initializable{
     @FXML
     void btn_register_click(ActionEvent event) {
 
+    	String name = txt_name.getText();
+    	String pass = txt_pass.getText();
+    	LocalDate dob = txt_dob.getValue();
+    	
+    	// selected index
+    	int selected_index = cbo_city.getSelectionModel().getSelectedIndex();
+    	
+    	// selected item
+    	String selected_item = cbo_city.getSelectionModel().getSelectedItem();
+    	String skillsets = "";
+    	if(chk_java.isSelected()) {
+    		skillsets += chk_java.getText() + ",";
+    	}
+    	if(chk_php.isSelected()) {
+    		skillsets += chk_php.getText() + ",";
+    	}
+    	if(chk_javascript.isSelected()) {
+    		skillsets += chk_javascript.getText() + ",";
+    	}
+    	
+    	RadioButton selected_radio = (RadioButton) rad_group.getSelectedToggle();
+    	
+    	String gender = selected_radio.getText();
+    	
+    	String others = text_area.getText();
+    	
+    	System.out.println("------- Your Profile -------");
+    	System.out.println("Name: " + name);
+    	System.out.println("Password: " + pass);
+    	System.out.println("Birthday: " + dob);
+    	System.out.println("City: " + selected_item + "(" + selected_index + ")");
+    	System.out.println("Skillset: " + skillsets);
+    	System.out.println("Gender: " + gender);
+    	System.out.println("Other Information: " + others);
     }
 
 	@Override
