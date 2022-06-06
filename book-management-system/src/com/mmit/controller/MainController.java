@@ -16,7 +16,7 @@ public class MainController {
 
     @FXML
     void book_click(MouseEvent event) throws IOException {
-    	Start.change_scence("view/Books.fxml");
+    	Start.change_scence("view/Book.fxml");
     }
 
     @FXML
