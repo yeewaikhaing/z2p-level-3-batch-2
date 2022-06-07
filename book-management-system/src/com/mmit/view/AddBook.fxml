@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="628.0" prefWidth="729.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<AnchorPane fx:controller="com.mmit.controller.BookAddController" prefHeight="628.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="31.0" prefHeight="50.0" prefWidth="730.0" style="-fx-background-color: #cccc00#cccc00;">
          <children>
@@ -26,38 +25,39 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="260.0" layoutY="132.0" prefHeight="34.0" prefWidth="245.0" promptText="Code" />
+      <TextField fx:id="txt_code" layoutX="260.0" layoutY="132.0" prefHeight="34.0" prefWidth="245.0" promptText="Code" />
       <Label layoutX="128.0" layoutY="191.0" text="Book Title">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="260.0" layoutY="184.0" prefHeight="34.0" prefWidth="245.0" promptText="Title" />
+      <TextField fx:id="txt_title" layoutX="260.0" layoutY="184.0" prefHeight="34.0" prefWidth="245.0" promptText="Title" />
       <Label layoutX="128.0" layoutY="244.0" text="Book Price">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="260.0" layoutY="237.0" prefHeight="34.0" prefWidth="245.0" promptText="Price" />
+      <TextField fx:id="txt_price" layoutX="260.0" layoutY="237.0" prefHeight="34.0" prefWidth="245.0" promptText="Price" />
       <Label layoutX="128.0" layoutY="352.0" text="Author">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <ComboBox layoutX="260.0" layoutY="343.0" prefHeight="34.0" prefWidth="245.0" promptText="Choose Author" />
+      <ComboBox fx:id="cbo_author" layoutX="260.0" layoutY="343.0" prefHeight="34.0" prefWidth="245.0" promptText="Choose Author" />
       <Label layoutX="128.0" layoutY="409.0" text="Category">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <ComboBox layoutX="260.0" layoutY="400.0" prefHeight="34.0" prefWidth="245.0" promptText="Choose Category" />
+      <ComboBox fx:id="cbo_category" layoutX="260.0" layoutY="400.0" prefHeight="34.0" prefWidth="245.0" promptText="Choose Category" />
       <Label layoutX="128.0" layoutY="298.0" text="Publish Date">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <DatePicker layoutX="260.0" layoutY="290.0" prefHeight="34.0" prefWidth="245.0" promptText="Publish Date" />
-      <Button layoutX="260.0" layoutY="459.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #33cc33#33cc33;" text="Save" textFill="#f8f8f8" />
-      <Button layoutX="408.0" layoutY="460.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #33cc33#33cc33;" text="Save" textFill="#f8f8f8" />
+      <DatePicker fx:id="txt_publish" layoutX="260.0" layoutY="290.0" prefHeight="34.0" prefWidth="245.0" promptText="Publish Date" />
+      <Button layoutX="260.0" layoutY="459.0" mnemonicParsing="false" onAction="#btn_save_click" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #33cc33#33cc33;" text="Save" textFill="#f8f8f8" />
+      <Button layoutX="386.0" layoutY="459.0" mnemonicParsing="false" onAction="#btn_reset_click" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #ff4d4d#ff4d4d;" text="Reset" textFill="#f8f8f8" />
+      <Button layoutX="633.0" layoutY="579.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #1aa3ff#1aa3ff;" text="Back" textFill="#f8f8f8" />
    </children>
 </AnchorPane>
